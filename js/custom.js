@@ -11,6 +11,7 @@ for (var i = 0; i < but.length; i++) {
 	but[i].addEventListener('click',function () {
 	content.classList.remove('content-box--display');
 	navi.style.top=0+"px";
+	navi.style.position="fixed";
 	navi.classList.add('b-head_navi-background');
 	navi.classList.remove('b-head_navi-buttons');
 	phone.style.display="inline-block";
