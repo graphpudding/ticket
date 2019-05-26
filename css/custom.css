@@ -9,7 +9,7 @@ body{
 .h1{
 	font-weight: 700;
 	padding:0px 15px;
-	color: black;
+	color: #000000;
 }
 .uppercase{
 	text-transform: uppercase;
@@ -223,10 +223,13 @@ body{
 	box-sizing: border-box;
 	padding: 24px 0px;
 }
-.b-content-tickets,.b-content_about{
+.b-content-tickets,.b-content_about,.b-content_footer{
 	background: #fff;
 	box-sizing: border-box;
 	padding: 15px;
+}
+.b-content_footer{
+	background: #0b082a;
 }
 .mounth{
 	font-size: 16px;
@@ -485,5 +488,5 @@ body{
 	width: 100%;
 }
 .b-content_about-tickets{
-	padding: 0px 15px;
+	padding: 0px 15px;-
 }
