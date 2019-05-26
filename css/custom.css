@@ -411,8 +411,8 @@ body{
 	align-content: flex-start;
 }
 
-.b-content_news{
-	background:rgba(0,0,0,0.1);
+.b-content_news, .b-content_about, .b-content_photo{
+	background:rgba(0,0,0,0.06);
 }
 .b-content_card{
 	width: 50%;
@@ -479,8 +479,11 @@ body{
 .big-news{
 	width:100%;
 	order:-1;
-	cursor: default
+	cursor: default;
 }
 .passage-photo{
 	width: 100%;
+}
+.b-content_about-tickets{
+	padding: 0px 15px;
 }
