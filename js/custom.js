@@ -3,25 +3,31 @@ var navi=document.getElementById('js-navi');
 var but=document.getElementsByClassName('js-but');
 var news=document.getElementsByClassName('js-news');
 var newsCard=document.getElementsByClassName('js-news-card');
+var zone=document.getElementsByClassName('js-zone');
+var zoneContent=document.getElementsByClassName('js-zone-content');
 var phone=document.getElementById('js-phone');
 var cart=document.getElementById('js-cart');
 var logo=document.getElementById('js-logo');
 var buy=document.getElementById('js-buy');
+var burger=document.getElementById('js-burger');
 var buttons=document.getElementById('js-buttons');
 var head=document.getElementById('js-b-head');
 
 for (var i = 0; i < but.length; i++) {
 	but[i].addEventListener('click',function () {
-		content.classList.remove('content-box--display');
+		content.classList.remove('invisible');
 		navi.style.top=0+"px";
 		navi.style.position="fixed";
 		navi.classList.add('b-head_navi-background');
 		navi.classList.remove('b-head_navi-buttons');
-		phone.style.display="inline-block";
-		cart.style.display="inline-block";
+		navi.classList.remove('b-head_navi');
+		navi.classList.add('b-head_navi-main');
+		phone.classList.remove('invisible');
+		cart.classList.remove('invisible');
 		logo.style.display="none";
 		buy.style.display="none";
 		head.style.height="0px";
+		burger.classList.remove('invisible');
 	}) 
 }
 
@@ -37,6 +43,8 @@ for(var i = 0; i < newsCard.length; i++){
 	})
 
 }
+
+
 $(document).ready(function(){
     $("#js-navi").on("click","a", function (event) {
         event.preventDefault();

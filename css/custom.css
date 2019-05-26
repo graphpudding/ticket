@@ -18,14 +18,13 @@ body{
 	font-size: 16px;
 	color: #000000;
 	line-height: 24px;
-	padding: 0px 15px;
 	width: 100%;
 }
 .inline-block{
 	display: inline-block;
 }
 .invisible{
-	display: none;
+	display: none!important;
 }
 .background-image{
 	filter: blur(5px);
@@ -68,7 +67,7 @@ body{
 .b-head_navi-background{
 	background: #0b082a;
 }
-.b-head_navi{
+.b-head_navi,.b-head_navi-main{
 	padding: 25px 0px;
 	margin: auto;
 	transition: all, 0.5s;
@@ -76,6 +75,108 @@ body{
 	z-index:10;
 	width:100%;
 }
+.burger-menu{
+	display: none;
+	padding: 25px 0px;
+	margin: auto;
+	transition: all, 0.5s;
+	z-index:10;
+	width:100%;
+	background: #0b082a;
+	color: #fff;
+}
+.b-head_navi-cart-mobile{
+	display: inline-block;
+	text-align: right;
+	color: #fff;
+	opacity: 0.68;
+	font-weight: 400;
+	float: right;
+	padding-right: 15px;
+}
+.burger-menu-icon{
+	position: relative;
+	padding-left:15px;
+}
+.burger-menu-icon:hover .b-head_navi-mobile{
+	display: flex;
+}
+.b-head_navi-mobile{
+	display: none;
+	position: absolute;
+	left: 0px;
+	width: 200px;
+}
+.b-head_navi-but--mobile{
+	margin-top:15px;
+	margin-left:23px;
+}
+
+.b-head_phone.b-head_phone--mobile {
+	font-weight: 700;
+	opacity: 0.8;
+	color: #fff;
+	font-weight: bold;
+	margin-left: 30px;
+	margin-bottom: 15px;
+	text-decoration: none;
+	font-size: 20px;
+	width:auto;
+	border-radius:3px;
+}
+@media (max-width: 991px){
+	.b-head_navi-main{
+		display: none;
+	}
+	.burger-menu{
+		display: inline-block;
+	}
+	.b-content{
+		width:100%!important;
+	}
+	.b-content-tickets{
+		width:100%!important;
+	}
+}
+@media (max-width: 767px){
+	.b-tickets_head{
+		width:100%!important;
+	}
+	.b-tickets_zone{
+		width:100%!important;
+	}
+	.b-tickets_card-buy{
+		width:auto!important;
+		padding-right:0px!important;
+	}
+	.b-content-tickets{
+		padding:0px!important;
+	}
+		.b-content_sale{
+		padding:0px!important;
+	}
+}
+@media (max-width: 576px){
+
+}
+@media(max-width: 700px){
+	.b-tickets_card-background{
+		display: none!important;
+	}
+	.b-tickets_card{
+		height: auto!important;
+		flex-direction: column;
+		align-content:  stretch;
+	}
+	.b-tickets_card-data{
+		width:100%!important;
+	}
+	.b-tickets_card-content{
+		width:100%!important;
+	}
+
+}
+
 .b-head_navi-buttons, .b-head_phone, .b-head_navi-cart{
 	margin:0px;
 	box-sizing: border-box;
@@ -84,6 +185,10 @@ body{
 	width:59%;
 	text-align: center;
 	display: inline-block;
+}
+.b-head_navi-buttons-mobile{
+	display: flex;
+	flex-direction: column;
 }
 .b-head_navi-but{
 	height: 100%;
@@ -104,7 +209,7 @@ body{
 	opacity:0.68;
 }
 .b-head_phone{
-	display: none;
+	display: inline-block;
 	width: 20%;
 	opacity:0.8;
 }
@@ -122,7 +227,7 @@ body{
 	border-radius: 5px;
 }
 .b-head_navi-cart{
-	display: none;
+	display: inline-block;
 	width:20%;
 	text-align: right;
 	color:#fff;
@@ -133,6 +238,10 @@ body{
 	padding: 10px;
 }
 .b-head_phone a:hover, .b-head_navi-but:hover{
+	background:#fff;
+	color: #0b082a;
+}
+.b-head_phone.b-head_phone--mobile:hover{
 	background:#fff;
 	color: #0b082a;
 }
@@ -223,14 +332,15 @@ body{
 	box-sizing: border-box;
 	padding: 24px 0px;
 }
+.b-head-null{
+	height: 0px;
+}
 .b-content-tickets,.b-content_about,.b-content_footer{
 	background: #fff;
 	box-sizing: border-box;
 	padding: 15px;
 }
-.b-content_footer{
-	background: #0b082a;
-}
+
 .mounth{
 	font-size: 16px;
 	font-weight: 700;
@@ -489,4 +599,123 @@ body{
 }
 .b-content_about-tickets{
 	padding: 0px 15px;-
+}
+.b-content-plan{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.b-content_sale{
+	padding: 15px;
+	box-sizing: border-box;
+}
+.b-tickets_zone{
+	display: flex;
+	flex-direction: column;
+}
+.b-content_tickets{
+	display: flex;
+	flex-direction: column;
+}
+.b-tickets_zone{
+	display: flex;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.b-tickets_zone-content{
+	display: flex;
+	height: 50px;
+	box-shadow: 0 0 4px rgba(0,0,0,0.6);
+	background: rgba(0,0,0,0.15);
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.b-tickets_row{
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+.zone-number,
+.tickets-count,
+.tickets-price,
+.tickets-buy,
+.tickets-visible{
+	width:25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.zone-number{
+	box-shadow: -0.5px 0px 1px rgba(0,0,0,0.2);
+}
+.b-tickets_row-content{
+	height: 50px;
+	display: flex;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+	background: rgba(0,0,0,0.05);
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.b-tickets_place{
+	height: 40px;
+	display: flex;
+	box-shadow: 0 0 3px rgba(0,0,0,0.2);
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+.tickets-visible,
+.tickets-buy{
+	box-shadow: .5px 0px 1px rgba(0,0,0,0.2);
+}
+.b-tickets_place .zone-number{
+	box-shadow:none;
+}
+.b-tickets_place .tickets-count{
+	box-shadow: -0.5px 0px 1px rgba(0,0,0,0.2);
+}
+.b-content_footer{
+	display: flex;
+	height: 130px;
+	width: 80%;
+	margin: auto;
+	background: #0b082a;
+}
+.footer-navi{
+	display: flex;
+	flex-direction: column;
+}
+.navi-item{
+	display:inline-block;
+	color: #fff;
+	font-weight: 100; 
+	letter-spacing: 1px;
+	text-decoration: none;
+	font-size: 14px;
+	padding:4px;
+	border-radius: 3px;
+}
+.navi-item:hover{
+	background:#fff;
+	color: #0b082a;
+}
+.b-footer{
+	background: #0b082a;
+	width: 100%;
+}
+.b-tickets_head{
+	display: flex;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	background: rgba(0,0,0,0.5);
+	font-size: 14px;
+	text-transform: uppercase;
+	color:#fff;
+	height: 50px;
+	font-weight:700;
 }
