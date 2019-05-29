@@ -11,6 +11,9 @@ body{
 	padding:0px 15px;
 	color: #000000;
 }
+.bold-text{
+	font-weight: bold;
+}
 .uppercase{
 	text-transform: uppercase;
 }
@@ -164,6 +167,9 @@ body{
 	.b-main-but{
 			margin-top: 89px;
 	}
+	.b-content-plan{
+		width:100%!important;
+	}
 }
 @media (max-width: 576px){
 		.b-main-but{
@@ -182,6 +188,30 @@ body{
 		}
 		.region{
 			font-size:20px!important;
+		}
+		.zone-number{
+			width:20%!important;
+		}
+		.tickets-price{
+			width:30%!important;
+		}
+		.b-tickets_row-content,.b-tickets_zone-content{
+			font-size: 13px!important;
+		}
+		.ticket-input{
+			width: 25px!important;
+			height: 23px!important;
+		}
+		.ticket-right, .ticket-left{
+			width: 25px!important;
+			height: 25px!important;
+			font-size: 18px!important;
+			vertical-align: middle;
+		}
+}
+@media(max-width:320px){
+		.b-tickets_row-content,.b-tickets_zone-content{
+			font-size: 12px!important;
 		}
 }
 @media(max-width: 700px){
@@ -391,12 +421,16 @@ body{
 .b-head-null{
 	height: 0px;
 }
-.b-content-tickets,.b-content_about,.b-content_footer{
+.b-content-tickets,.b-content_about,.b-content-template{
 	background: #fff;
 	box-sizing: border-box;
 	padding: 15px;
+	min-height: 700px;
 }
-
+.b-content_footer{
+	box-sizing: border-box;
+	padding: 15px;
+}
 .mounth{
 	font-size: 16px;
 	font-weight: 700;
@@ -707,7 +741,7 @@ body{
 	justify-content: center;
 }
 .zone-number{
-	box-shadow: -0.5px 0px 1px rgba(0,0,0,0.2);
+	box-shadow: -1px 0px 1px rgba(0,0,0,0.2);
 }
 .b-tickets_row-content{
 	height: 50px;
@@ -727,13 +761,13 @@ body{
 
 .tickets-visible,
 .tickets-buy{
-	box-shadow: .5px 0px 1px rgba(0,0,0,0.2);
-}
-.b-tickets_place .zone-number{
-	box-shadow:none;
+	box-shadow: 1px 0px 1px rgba(0,0,0,0.2);
 }
 .b-tickets_place .tickets-count{
-	box-shadow: -0.5px 0px 1px rgba(0,0,0,0.2);
+	box-shadow:none;
+}
+.b-tickets_place {
+	box-shadow: 0px 2px 1px rgba(0,0,0,0.2);
 }
 .b-content_footer{
 	display: flex;
@@ -776,4 +810,52 @@ body{
 	color:#fff;
 	height: 50px;
 	font-weight:700;
+}
+.b-tickets_zone-content.b-tickets_zone--big{
+	background: white;
+}
+.ticket-input{
+	width: 35px;
+	height: 28px;
+	text-align: center;
+	border: 0px;
+	background: rgba(0,0,0,0.08);
+}
+.ticket-right, .ticket-left{
+	border: 0px;
+	width: 35px;
+	height: 30px;
+	font-size: 22px;
+	color: #726f6f;
+	background: rgba(0,0,0,0.14);
+}
+.b-buy_button{
+	height: 40px;
+	width: 160px;
+	background: #6664f5;
+	color: #fff;
+	text-align: center;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	border: #fff 2px solid;
+	transition: all, .1s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	font-weight: 700;
+	border-radius: 4px;
+	text-decoration: none;
+	margin-right: 25px;
+	margin-top:25px;
+	margin-bottom: 25px;
+}
+.b-buy_button:active{
+	color:#0b082a;
+	border: 0.7px solid #0b082a;
+}
+.b-buy{
+	width: 100%;
+	display: flex;
+	justify-content: right;
 }

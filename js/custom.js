@@ -53,3 +53,28 @@ $(document).ready(function(){
         $('body,html').animate({scrollTop: top}, 800);
     });
 });
+var ticketsCount = $('.js-ticket-input').val();
+$('#ticket-left').click(function(){
+	if(ticketsCount>0){
+	   ticketsCount--;
+	   $('.js-ticket-input').val(ticketsCount);
+	}
+});
+
+$('#ticket-right').click(function(){
+   ticketsCount++;
+   $('.js-ticket-input').val(ticketsCount);
+});
+
+var ticketsCount = $('.js-ticket-input1').val();
+$('#ticket-left1').click(function(){
+	if(ticketsCount>0){
+	   ticketsCount--;
+	   $('.js-ticket-input1').val(ticketsCount);
+	}
+});
+
+$('#ticket-right1').click(function(){
+   ticketsCount++;
+   $('.js-ticket-input1').val(ticketsCount);
+});
