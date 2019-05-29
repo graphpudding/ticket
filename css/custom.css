@@ -137,6 +137,12 @@ body{
 	.b-content-tickets{
 		width:100%!important;
 	}
+	.b-head_navi-buttons{
+		width:100%!important;
+	}
+	.b-main-logo{
+		font-size: 100px!important;
+	}
 }
 @media (max-width: 767px){
 	.b-tickets_head{
@@ -149,20 +155,62 @@ body{
 		width:auto!important;
 		padding-right:0px!important;
 	}
-	.b-content-tickets{
+	.b-content_sale{
 		padding:0px!important;
 	}
-		.b-content_sale{
-		padding:0px!important;
+	.b-main-logo{
+		font-size: 80px!important;
+	}
+	.b-main-but{
+			margin-top: 89px;
 	}
 }
 @media (max-width: 576px){
-
+		.b-main-but{
+			margin-top: 89px;
+			padding: 15px!important;
+		}
+		.b-main-logo{
+		font-size: 65px!important;
+		}
+		.b-head_navi-buttons{
+			display: flex!important;
+				flex-direction: column;
+		}
+		.b-head_navi-but{
+			margin-top: 8px;
+		}
+		.region{
+			font-size:20px!important;
+		}
 }
 @media(max-width: 700px){
-	.b-tickets_card-background{
-		display: none!important;
+	.b-tickets_card-region--distant, .b-tickets_card-buy--distant{
+		justify-content: center!important;
+		width: 100%!important;
+		padding-right:0px!important;
 	}
+	.b-tickets_card-buy--distant{
+		height: 50px;
+	}
+	.b-tickets_card-data-distant{
+		width:100%!important;
+	}
+	.b-tickets_card--distant{
+		flex-direction: column;
+		height: auto!important;
+	}
+	.b-tickets_card-content--distant{
+		width:100%!important;
+		justify-content: center;
+	}
+	.b-tickets_card-time{
+		padding-left: 15px;
+		display: inline-block!important;
+	}
+	.b-tickets_card-content--distant{
+		flex-direction: column;
+	}	
 	.b-tickets_card{
 		height: auto!important;
 		flex-direction: column;
@@ -173,8 +221,16 @@ body{
 	}
 	.b-tickets_card-content{
 		width:100%!important;
-	}
+		flex-direction: column;
 
+	}
+	.b-tickets_card-region{
+		width:100%!important;
+		text-align: center;
+	}
+	.b-tickets_card-buy{
+		justify-content: center!important;
+	}	
 }
 
 .b-head_navi-buttons, .b-head_phone, .b-head_navi-cart{
@@ -366,6 +422,8 @@ body{
 	display: flex;
 	background: rgba(0,0,0,0.4);
 	transition: all, 0.7s;
+	position: relative;
+
 }
 .b-tickets_card-region{
 	width: 50%;
@@ -422,7 +480,7 @@ body{
 }
 
 .b-tickets_card-background--distant,.b-tickets_card-background{
-	background-size:cover;
+	background-size: cover !important;
 	opacity: 0;
 	transition: all, 0.7s;
 	position: absolute;
@@ -432,10 +490,10 @@ body{
 }
 
 .b-tickets_card--distant:hover .b-tickets_card-background--distant{
-		opacity: 0.65;
+		opacity: 0.55;
 }
 .b-tickets_card:hover .b-tickets_card-background{
-	opacity: 1;
+	opacity:0.55;
 }
 .region{
 	z-index: 1;
