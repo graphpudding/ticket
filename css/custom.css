@@ -352,7 +352,6 @@ body{
 	width: 75%;
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
 }
 .b-tickets_card-buy{
 	width: 50%;
@@ -740,6 +739,11 @@ body{
 	background-size: cover;
 	background-position: center;
 }
+.geolocation{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
 @media (max-width: 991px){
 	.b-head_navi-main{
 		display: none;
@@ -882,6 +886,7 @@ body{
 	.location, .location--distant{
 		padding-bottom:20px;
 		padding-top:20px;
+		text-align: center;
 	}
 }
 @media (max-width: 991px){
