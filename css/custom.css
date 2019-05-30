@@ -38,7 +38,7 @@ body{
 	left: 0;
 	top: 0;
 	background-image: url(images/concert.jpg);
-	background-size: cover;
+	background-size: cover!important;
 }
 .mask{
 	width: 100%;
@@ -87,6 +87,7 @@ body{
 	width:100%;
 	background: #0b082a;
 	color: #fff;
+	position: fixed;
 	justify-content: space-around;
 }
 .b-head_navi-cart-mobile{
@@ -96,20 +97,25 @@ body{
 	opacity: 0.68;
 	font-weight: 400;
 	float: right;
+	font-size: 25px;
+	padding-top: 15px;
 }
 .burger-menu-icon{
 	position: relative;
 	padding-left:15px;
+	padding-top: 15px;
 	font-size:40px;
 }
 .burger-menu-icon:hover .b-head_navi-mobile{
-	display: flex;
+	left: -25px;
 }
 .b-head_navi-mobile{
-	display: none;
-	position: absolute;
-	left: 0px;
-	width: 200px;
+	position: fixed;
+	left: -275px;
+	width: 250px;
+	height: 100vh;
+	top: 0px;
+	transition: all, 0.7s;
 }
 .b-head_navi-but--mobile{
 	margin-top:15px;
@@ -124,144 +130,10 @@ body{
 	margin-left: 30px;
 	margin-bottom: 15px;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 16px;
 	width:auto;
 	border-radius:3px;
-}
-@media (max-width: 991px){
-	.b-head_navi-main{
-		display: none;
-	}
-	.burger-menu{
-		display: flex;
-	}
-	.b-content{
-		width:100%!important;
-	}
-	.b-content-tickets{
-		width:100%!important;
-	}
-	.b-head_navi-buttons{
-		width:100%!important;
-	}
-	.b-main-logo{
-		font-size: 100px!important;
-	}
-}
-@media (max-width: 767px){
-	.b-tickets_head{
-		width:100%!important;
-	}
-	.b-tickets_zone{
-		width:100%!important;
-	}
-	.b-tickets_card-buy{
-		width:auto!important;
-		padding-right:0px!important;
-	}
-	.b-content_sale{
-		padding:0px!important;
-	}
-	.b-main-logo{
-		font-size: 80px!important;
-	}
-	.b-main-but{
-			margin-top: 89px;
-	}
-	.b-content-plan{
-		width:100%!important;
-	}
-}
-@media (max-width: 576px){
-		.b-main-but{
-			margin-top: 89px;
-			padding: 15px!important;
-		}
-		.b-main-logo{
-		font-size: 65px!important;
-		}
-		.b-head_navi-buttons{
-			display: flex!important;
-				flex-direction: column;
-		}
-		.b-head_navi-but{
-			margin-top: 8px;
-		}
-		.region{
-			font-size:20px!important;
-		}
-		.zone-number{
-			width:20%!important;
-		}
-		.tickets-price{
-			width:30%!important;
-		}
-		.b-tickets_row-content,.b-tickets_zone-content{
-			font-size: 13px!important;
-		}
-		.ticket-input{
-			width: 25px!important;
-			height: 23px!important;
-		}
-		.ticket-right, .ticket-left{
-			width: 25px!important;
-			height: 25px!important;
-			font-size: 18px!important;
-			vertical-align: middle;
-		}
-}
-@media(max-width:320px){
-		.b-tickets_row-content,.b-tickets_zone-content{
-			font-size: 12px!important;
-		}
-}
-@media(max-width: 700px){
-	.b-tickets_card-region--distant, .b-tickets_card-buy--distant{
-		justify-content: center!important;
-		width: 100%!important;
-		padding-right:0px!important;
-	}
-	.b-tickets_card-buy--distant{
-		height: 50px;
-	}
-	.b-tickets_card-data-distant{
-		width:100%!important;
-	}
-	.b-tickets_card--distant{
-		flex-direction: column;
-		height: auto!important;
-	}
-	.b-tickets_card-content--distant{
-		width:100%!important;
-		justify-content: center;
-	}
-	.b-tickets_card-time{
-		padding-left: 15px;
-		display: inline-block!important;
-	}
-	.b-tickets_card-content--distant{
-		flex-direction: column;
-	}	
-	.b-tickets_card{
-		height: auto!important;
-		flex-direction: column;
-		align-content:  stretch;
-	}
-	.b-tickets_card-data{
-		width:100%!important;
-	}
-	.b-tickets_card-content{
-		width:100%!important;
-		flex-direction: column;
-
-	}
-	.b-tickets_card-region{
-		width:100%!important;
-		text-align: center;
-	}
-	.b-tickets_card-buy{
-		justify-content: center!important;
-	}	
+	font-family: ubuntu;
 }
 
 .b-head_navi-buttons, .b-head_phone, .b-head_navi-cart{
@@ -390,7 +262,7 @@ body{
 	position: relative;
 	display: flex;
 	background: #5c5cff;
-	height: 100px;
+	height: 150px;
 	width: 100%;
 	margin: auto;
 	color:#fff;
@@ -398,7 +270,7 @@ body{
 	margin-bottom: 15px;
 }
 .b-tickets_card--distant{
-	height: 70px;
+	height: 120px;
 }
 .b-tickets_card-date{
 	display: block;
@@ -410,6 +282,8 @@ body{
 	height: 100%;
 	text-align: center;
 	z-index: 1;
+	display: flex;
+	flex-direction: column;
 }
 .b-tickets_card-data-distant{
 	width: 15%;
@@ -418,6 +292,9 @@ body{
 	z-index: 1;
 	box-sizing: border-box;
 	padding: 24px 0px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .b-head-null{
 	height: 0px;
@@ -446,7 +323,7 @@ body{
 	font-weight: 700;
 }
 .day--distant{
-	font-size: 16px;
+	font-size: 32px;
 	font-weight: 700;
 
 }
@@ -475,7 +352,7 @@ body{
 	width: 75%;
 	display: flex;
 	align-items: center;
-
+	justify-content: space-evenly;
 }
 .b-tickets_card-buy{
 	width: 50%;
@@ -483,8 +360,8 @@ body{
 	align-items: center;
 	color: #fff;
 	text-decoration: none;
-	justify-content: right;
-
+	justify-content: flex-end;
+	padding-bottom: 15px;
 	box-sizing: border-box;
 	padding-right: 30px;
 }
@@ -498,22 +375,24 @@ body{
 	box-sizing: border-box;
 	padding-right: 30px;
 	text-transform: uppercase;
+	padding-bottom: 15px
 }
 .b-tickets_card-buy-cart{	
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background: #5c5cff;
-	text-align: center;
-	vertical-align: bottom;
-	display: flex;
-	text-decoration: none;
-	align-items: center;
-	align-content: flex-end;
-	justify-content: center;
-	transition: all, 0.5s;
-	z-index: 1;
-	color: #fff;
+	width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #5c5cff;
+    text-align: center;
+    vertical-align: bottom;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    align-content: flex-end;
+    justify-content: center;
+    transition: all, 0.5s;
+    z-index: 1;
+    color: #fff;
+    font-size: 24px;
 }
 .b-tickets_card-buy-cart:hover{
 	color: #0b082a;
@@ -521,31 +400,32 @@ body{
 }
 
 .b-tickets_card-background--distant,.b-tickets_card-background{
-	background-size: cover !important;
+	background-size: cover!important;
 	opacity: 0;
 	transition: all, 0.7s;
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	margin: auto;
+	background-position: center!important;
 }
 
 .b-tickets_card--distant:hover .b-tickets_card-background--distant{
-		opacity: 0.55;
+		opacity: 0.45;
 }
 .b-tickets_card:hover .b-tickets_card-background{
-	opacity:0.55;
+	opacity:0.45;
 }
 .region{
 	z-index: 1;
-	font-size: 24px;
+	font-size: 32px;
 	font-weight: 700;
 	padding: 10px;
 	text-transform: uppercase;
 }
 .region--distant{
 	z-index: 1;
-	font-size: 14px;
+	font-size: 24px;
 	font-weight: 700;
 	padding: 10px;
 	text-transform: uppercase;
@@ -553,12 +433,12 @@ body{
 
 .location{
 	z-index: 1;
-	font-size: 14px;
+	font-size: 20px;
 	padding: 15px;
 }
 .location--distant{
 	z-index: 1;
-	font-size: 14px;
+	font-size: 18px;
 	padding: 10px;
 	font-weight: 700;
 }
@@ -642,7 +522,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background-position-x: center !important;
+	background-position-x: center ;
 	text-decoration: none;
 }
 .b-news-description{
@@ -663,19 +543,6 @@ body{
 	width:33%;
 	box-sizing: border-box;
 	padding: 15px;
-}
-@media (max-width: 991px){
-	.b-content_card{
-		width: 100%;
-	}
-	.b-passage-photo{
-		width: 50%;
-	}
-}
-@media(max-width: 767px){
-	.b-passage-photo{
-		width: 100%;
-	}
 }
 .b-content_card-mask{
 	position: absolute;
@@ -872,4 +739,161 @@ body{
 	height: 70px;
 	background-size: cover;
 	background-position: center;
+}
+@media (max-width: 991px){
+	.b-head_navi-main{
+		display: none;
+	}
+	.burger-menu{
+		display: flex;
+	}
+	.b-content{
+		width:100%;
+	}
+	.b-content-tickets{
+		width:100%;
+	}
+	.b-head_navi-buttons{
+		width:100%;
+	}
+	.b-main-logo{
+		font-size: 100px;
+	}
+}
+@media (max-width: 767px){
+	.b-tickets_head{
+		width:100%;
+	}
+	.b-tickets_zone{
+		width:100%;
+	}
+	.b-tickets_card-buy{
+		width:auto;
+		padding-right:0px;
+	}
+	.b-content_sale{
+		padding:0px;
+	}
+	.b-main-logo{
+		font-size: 80px;
+	}
+	.b-main-but{
+			margin-top: 89px;
+	}
+	.b-content-plan{
+		width:100%;
+	}
+}
+@media (max-width: 576px){
+		.b-main-but{
+			margin-top: 89px;
+			padding: 15px;
+		}
+		.b-main-logo{
+		font-size: 65px;
+		}
+		.b-head_navi-buttons{
+			display: flex;
+				flex-direction: column;
+		}
+		.b-head_navi-but{
+			margin-top: 8px;
+		}
+		.region{
+			font-size:28px;
+		}
+		.zone-number{
+			width:20%;
+		}
+		.tickets-price{
+			width:30%;
+		}
+		.b-tickets_row-content,.b-tickets_zone-content{
+			font-size: 13px;
+		}
+		.ticket-input{
+			width: 25px;
+			height: 23px;
+		}
+		.ticket-right, .ticket-left{
+			width: 25px;
+			height: 25px;
+			font-size: 18px;
+			vertical-align: middle;
+		}
+}
+@media(max-width:320px){
+		.b-tickets_row-content,.b-tickets_zone-content{
+			font-size: 12px;
+		}
+}
+@media(max-width: 700px){
+	.b-tickets_card-region--distant, .b-tickets_card-buy--distant{
+		justify-content: center;
+		width: 100%;
+		padding-right:0px;
+		flex-direction: column;
+	}
+	.b-tickets_card-buy--distant{
+		height: 50px;
+	}
+	.b-tickets_card-data-distant{
+		width:100%;
+	}
+	.b-tickets_card--distant{
+		flex-direction: column;
+		height: auto;
+	}
+	.b-tickets_card-content--distant{
+		width:100%;
+		justify-content: center;
+	}
+	.b-tickets_card-time{
+		padding-left: 15px;
+		display: inline-block;
+	}
+	.b-tickets_card-content--distant{
+		flex-direction: column;
+	}	
+	.b-tickets_card{
+		height: auto;
+		flex-direction: column;
+		align-content:  stretch;
+	}
+	.b-tickets_card-data{
+		width:100%;
+	}
+	.b-tickets_card-content{
+		width:100%;
+		flex-direction: column;
+
+	}
+	.b-tickets_card-region{
+		width:100%;
+		text-align: center;
+	}
+	.b-tickets_card-buy{
+		justify-content: center;
+	}	
+	.region, .region--distant{
+		padding-bottom:20px;
+		padding-top:20px;
+	}
+	.location, .location--distant{
+		padding-bottom:20px;
+		padding-top:20px;
+	}
+}
+@media (max-width: 991px){
+	.b-content_card{
+		width: 100%;
+	}
+	.b-passage-photo{
+		width: 50%;
+	}
+}
+@media(max-width: 767px){
+	.b-passage-photo{
+		width: 100%;
+	}
 }
