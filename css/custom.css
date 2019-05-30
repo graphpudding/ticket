@@ -80,13 +80,14 @@ body{
 }
 .burger-menu{
 	display: none;
-	padding: 25px 0px;
+	padding: 10px 0px;
 	margin: auto;
 	transition: all, 0.5s;
 	z-index:10;
 	width:100%;
 	background: #0b082a;
 	color: #fff;
+	justify-content: space-around;
 }
 .b-head_navi-cart-mobile{
 	display: inline-block;
@@ -95,11 +96,11 @@ body{
 	opacity: 0.68;
 	font-weight: 400;
 	float: right;
-	padding-right: 15px;
 }
 .burger-menu-icon{
 	position: relative;
 	padding-left:15px;
+	font-size:40px;
 }
 .burger-menu-icon:hover .b-head_navi-mobile{
 	display: flex;
@@ -132,7 +133,7 @@ body{
 		display: none;
 	}
 	.burger-menu{
-		display: inline-block;
+		display: flex;
 	}
 	.b-content{
 		width:100%!important;
@@ -421,7 +422,12 @@ body{
 .b-head-null{
 	height: 0px;
 }
-.b-content-tickets,.b-content_about,.b-content-template{
+.b-content-tickets{
+	background: #fff;
+	box-sizing: border-box;
+	padding: 15px;
+}
+.b-content_about,.b-content-template{
 	background: #fff;
 	box-sizing: border-box;
 	padding: 15px;
@@ -478,6 +484,7 @@ body{
 	color: #fff;
 	text-decoration: none;
 	justify-content: right;
+
 	box-sizing: border-box;
 	padding-right: 30px;
 }
@@ -858,4 +865,11 @@ body{
 	width: 100%;
 	display: flex;
 	justify-content: right;
+}
+.mobile-logo{
+	background: url(images/mobilelogo.jpeg);
+	width: 70%;
+	height: 70px;
+	background-size: cover;
+	background-position: center;
 }
