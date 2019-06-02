@@ -733,7 +733,7 @@ body{
 	justify-content: right;
 }
 .mobile-logo{
-	background: url(images/mobilelogo.jpeg);
+	background: url(images/mobilelogo.png);
 	width: 70%;
 	height: 70px;
 	background-size: cover;
