@@ -116,6 +116,9 @@ body{
 	height: 100vh;
 	top: 0px;
 	transition: all, 0.7s;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .b-head_navi-but--mobile{
 	margin-top:15px;
@@ -124,7 +127,7 @@ body{
 
 .b-head_phone.b-head_phone--mobile {
 	font-weight: 700;
-	opacity: 0.8;
+	opacity: 0.68;
 	color: #fff;
 	font-weight: bold;
 	margin-left: 30px;
@@ -455,8 +458,8 @@ body{
 	font-size: 14px;
 }
 .b-tickets_card-buy-request{
-	height: 40px;
-	width: 145px;
+	height: 45px;
+	width: 160px;
 	background: #6664f5;
 	color: #fff;
 	text-align: center;
@@ -471,10 +474,12 @@ body{
 	font-weight: 700;
 	border-radius: 4px;
 	text-decoration: none;
+	margin-top: 15px;
+	padding: 12px 3px;
 }
 .b-tickets_card-buy-request:hover{
 	background: #6664f5;
-	height: 45px;
+	height: 48px;
 	}
 .b-tickets_card-content--distant{
 	width: 85%;
@@ -839,7 +844,7 @@ body{
 		flex-direction: column;
 	}
 	.b-tickets_card-buy--distant{
-		height: 50px;
+		height: 80px;
 	}
 	.b-tickets_card-data-distant{
 		width:100%;
@@ -878,6 +883,7 @@ body{
 	}
 	.b-tickets_card-buy{
 		justify-content: center;
+		text-decoration: none;
 	}	
 	.region, .region--distant{
 		padding-bottom:20px;
