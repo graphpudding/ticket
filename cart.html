@@ -12,7 +12,7 @@
 		<div class="background-image"></div>
 <div class="">	
 	<div id="js-b-head" class="b-head b-head-null">
-		<div id="js-navi" class="b-head_navi-main b-head_navi-background">
+		<div id="js-navi" class="b-head_navi-main b-head_navi-background fixed">
 			<div id="js-buttons" class="b-head_navi-buttons">
 				<a href="#" class="b-head_navi-but js-but">Главная</a>
 				<a href="#" class="b-head_navi-but js-but">Афиша</a>
@@ -30,7 +30,7 @@
 					<a href="tel:+1234567890"><i class="fas fa-phone"></i>	 8(495)794-02-66</a><br>
 				</div>
 		</div>
-		<div class="burger-menu">
+		<div id="js-burger" class="burger-menu">
 			<i class="fa fa-bars burger-menu-icon" aria-hidden="true">
 				<div id="js-navi" class="b-head_navi-mobile b-head_navi-background">
 					<div id="js-buttons" class="b-head_navi-buttons-mobile">
@@ -39,26 +39,131 @@
 						<a href="#anchor-news" class="b-head_navi-but b-head_navi-but--mobile js-but">новости</a>
 						<a href="#anchor-about" class="b-head_navi-but b-head_navi-but--mobile js-but">О исполнителе</a>
 						<a href="#" class="b-head_navi-but b-head_navi-but--mobile js-but">Контакты</a>
-						<div id="js-phone" class="b-head_phone b-head_phone--mobile">
-							<a href="tel:+1234567890">8(495)794-02-66</a><br>
+					</div>
+						<a href="tel:+1234567890" id="js-phone" class="b-head_phone b-head_phone--mobile">8(495)794-02-66</a>
+				</div>
+			</i>
+			<div class="mobile-logo"></div>
+			<a href="#" id="js-cart" class="b-head_navi-cart-mobile">
+							<span class="b-head_navi-you-cart">
+							</span>
+							<i class="fas fa-shopping-cart"></i>
+			</a>
+		</div>	
+	</div>
+	<div class="content-box">
+			<h1 class="h1 uppercase cart-h1"> Оформление заказа</h1>
+				<div class="b-content-cart row">
+					<div class="b-left-block">
+						<div class="personal-info">	
+							<h3 class="h1 uppercase">Данные покупателя</h3>
+							<p>Имя:</p>
+							<input class="input" type="text" value="Введите имя">
+							<p>Фамилия:</p>
+							<input class="input" type="text" value="Введите фамилию">
+							<p>Мобильный телефон</p>
+							<input class="input" type="text" value="+7(XXX)-XX-XX-XX">
+							<p> Email:</p>
+							<input class="input" type="text" value="exampl@mmail.com">
+						</div>
+						<div class="delivery">
+							<div class="delivery-choice">
+								<div class="courier-choice active"><i class="fas fa-home"></i> &nbsp; доставка курьером
+								</div>
+								<div class="shipment-choice  blur">
+									<i class="fas fa-thumbtack"></i>&nbsp; самовывоз
+								</div>	
+							</div>	
+							<div class="courier">
+								<p>Адрес доставки:</p>
+								<textarea  type="text" value="" cols="50" rows="10"></textarea>
+							</div>
+							<div class="shipment invisible">
+								<p>наш пункт самовывоза:</p>
+								<p>Улица Пушкина дом колотушкина</p>
+								<div class="shipment-map">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25274.183183899473!2d37.51307706968331!3d55.95035482346882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1560690588715!5m2!1sru!2sru" width="70%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>		
+							<div class="pay">
+								<p class="pay-heading">выберите способ оплаты</p>
+								<div class="pay-blocks">
+									<div class="fifty-percent-block">
+										<div class="credit-card">
+											<i class="fa fa-credit-card credit-card-icon" aria-hidden="true"></i> &nbsp;&nbsp;
+										 банковской картой
+										</div>
+									</div>
+									<div class="fifty-percent-block">	
+										<div class="cash"> 
+											<img src="css/images/cash.png">наличными
+										</div>
+									</div>
+									<div class="fifty-percent-block">
+										<div class="samsung-pay"> 
+											<img src="css/images/samsung.png"> samsung pay
+										</div>
+									</div>
+									<div class="fifty-percent-block">
+										<div class="apple-pay">
+											<img src="css/images/Apple-Pay.png">
+											Apple pay
+										</div>
+									</div>
+								</div>
+								<div class="pay-methods">Мы принимаем:</div>
+							</div>	
+					
+				</div>	
+					<div class="b-right-block">
+						<div class="b-block-content">
+							<div class="b-count-container">
+								<h3 class="h1 uppercase">
+									 Количество билетов - 
+								 	<span>1</span>
+								</h3>
+							</div>
+							<div class="b-cart-event-info">
+								<div class="event-info-img" style="background: url(css/images/event.jpg)"></div>
+								<div class="event-info-text">
+									<span class="event-info-text-head">Jennifer Lopez</span>
+									<span>МОСКВА, ВТБ АРЕНА/ДИНАМО Центральный</span>
+									<span>воскресенье, 04.08.2019, 20.00</span>								
+								</div>
+							</div>
+							<div class="b-cart-tikets">
+								<div class="b-cart-section">
+									<div class="b-cart-section-info">F110</div>
+									<div class="section-info-row">Ряд</div>
+									<div class="section-info-place">Место</div>
+									<div class="section-info-price">Цена</div>
+								</div>
+								<div class="b-cart-tikets-info">
+									<div class="tikets-info-row">12</div>
+									<div class="tikets-info-place">14</div>
+									<div class="tikets-info-price"><span>2000</span>&nbsp; Руб</div>
+									<div class="tikets-info-delete"><i class="fa fa-times" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>	
+							<div class="b-cart-itogo">
+								<span>Итого</span>
+								<div>
+									<span>1234</span>
+									<span>руб</span>
+								</div>	
+							</div>
+							<div class="b-cart-koplate">
+								<span>Всего к оплате</span>
+								<div>
+									<span>1234</span>
+									<span>руб</span>
+								</div>	
+							</div>
 						</div>
 					</div>
 				</div>
-			</i>
-			<div id="js-cart" class="b-head_navi-cart-mobile" >
-							<span class="b-head_navi-you-cart">
-								ваша корзина пуста
-							</span>
-							<i class="fas fa-shopping-cart"></i>
-			</div>
-		</div>		
-	</div>
-	<div class="content-box">
-		<div class="b-content">
-			<div class="b-content-template">
-				<h1 class="h1 uppercase"> Корзина</h1>
-			</div>
-		</div>
 	</div>	
 	<!--footerblock-->
 	<div class="b-footer">
@@ -73,5 +178,7 @@
 	</div>	
 	<!--!footerblock-->	
 </div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>

@@ -12,7 +12,11 @@ var buy=document.getElementById('js-buy');
 var burger=document.getElementById('js-burger');
 var buttons=document.getElementById('js-buttons');
 var head=document.getElementById('js-b-head');
-
+var courierChoice=document.querySelector('.courier-choice');
+var shipmentChoice=document.querySelector('.shipment-choice');
+var courier=document.querySelector('.courier');
+var shipment=document.querySelector('.shipment');
+// анимация главной страницы
 for (var i = 0; i < but.length; i++) {
 	but[i].addEventListener('click',function () {
 		content.classList.remove('invisible');
@@ -30,7 +34,7 @@ for (var i = 0; i < but.length; i++) {
 		burger.classList.remove('invisible');
 	}) 
 }
-
+//news
 for(var i = 0; i < newsCard.length; i++){
 	newsCard[i].classList.remove('big-news');
 	 newsCard[i].addEventListener('click',function () {
@@ -43,16 +47,37 @@ for(var i = 0; i < newsCard.length; i++){
 	})
 
 }
-
-
+//переключалка доставки
 $(document).ready(function(){
-    $("#js-navi").on("click","a", function (event) {
+$('.courier-choice').on('click', function(){
+	courier.classList.remove('invisible');
+	shipment.classList.add('invisible');
+	courierChoice.classList.remove('blur');
+	courierChoice.classList.add('active');
+	shipmentChoice.classList.remove('active');
+	shipmentChoice.classList.add('blur');
+	console.log('hj,bn');
+});
+$('.shipment-choice').on('click',function(){
+	shipment.classList.remove('invisible');
+	courier.classList.add('invisible');
+	courierChoice.classList.remove('active');
+	courierChoice.classList.add('blur');
+	shipmentChoice.classList.remove('blur');
+	shipmentChoice.classList.add('active');
+	console.log('hj,bn');
+});
+});
+//плавный скролл
+$(document).ready(function(){
+    $('#js-navi').on('click','a', function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top-90+"px";
         $('body,html').animate({scrollTop: top}, 800);
     });
 });
+//счетчик билетов к покупке надо его сделать хитрее с ооп и тд 
 var ticketsCount = $('.js-ticket-input').val();
 $('#ticket-left').click(function(){
 	if(ticketsCount>0){
@@ -77,4 +102,7 @@ $('#ticket-left1').click(function(){
 $('#ticket-right1').click(function(){
    ticketsCount++;
    $('.js-ticket-input1').val(ticketsCount);
+});
+$('.input').click(function(){
+	this.value="";
 });
