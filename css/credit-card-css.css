@@ -75,11 +75,11 @@ input {
 }
 
 .ccicon {
-    height: 38px;
+    height: 33px;
     position: absolute;
-    right: 6px;
-    top: calc(50% - 17px);
-    width: 60px;
+    right: -5px;
+    top: calc(50% - 27px);
+    width: 60px;;
 }
 
 /* CREDIT CARD IMAGE STYLING */
