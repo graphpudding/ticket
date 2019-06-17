@@ -36,6 +36,7 @@ body{
 }
 .blur{
 	border-bottom: 1px solid black;
+	background-color: #f5e1e1;
 }
 .active{
 	border-top: 1px solid black;
@@ -82,6 +83,24 @@ body{
 }
 .b-head_navi-background{
 	background: #0b082a;
+}
+.b-pay-buy{
+	width: 180px;
+	height: 40px;
+	background: #0b082a;
+	color: #fff;
+	display: block;
+	margin: auto;
+	padding: 12px;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: 700;
+	transition: all, 0.7s;
+}
+.b-pay-buy:hover{
+background:#5c5cff;
 }
 .b-head_navi,.b-head_navi-main{
 	padding: 25px 0px;
@@ -292,9 +311,10 @@ body{
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
-.b-content-cart{
+.b-content-cart.row{
 	width: 88%;
 	margin:auto;
+	justify-content: center;
 }
 .b-tickets_card--distant{
 	height: 120px;
@@ -784,6 +804,7 @@ body{
 	width:60%;
 	padding: 0px 8px;
 	box-sizing: border-box;
+	max-width: 600px;
 }
 .b-right-block{
 	width:40%;
@@ -795,6 +816,7 @@ body{
 	background: #fff;
 	padding: 15px;
 	box-sizing: border-box;
+	background-color: #f9f9f9;
 }
 
 .personal-info,.delivery,.pay{
@@ -832,8 +854,10 @@ body{
 	height: 40px;
 	text-align: center;
 	box-sizing: border-box;
-	padding: 10px;
 	cursor: pointer;
+	display: flex;
+	align-items:center;
+	justify-content: center;
 }
 .fifty-percent-block{
 		width: 50%;
@@ -863,7 +887,7 @@ body{
 	display: flex;
 	height: 100px;
 	border: 1px solid rgba(0,0,0,0.3);
-	padding: 4px;
+	padding: 10px;
 }
 .event-info-text{
 	box-sizing: border-box;
@@ -938,6 +962,12 @@ body{
 	cursor: pointer;
 }
 @media (max-width: 991px){
+	.b-content-cart.row{
+		width: 100%;
+	}
+	.row{
+		padding: 0px;
+	}
 	.b-head_navi-main{
 		display: none;
 	}
@@ -958,6 +988,17 @@ body{
 	}
 }
 @media (max-width: 767px){
+	.b-content-cart.row{
+		flex-direction: column;
+	}
+	.b-left-block,.b-right-block{
+		width: 100%;
+		max-width: 100%;
+	}
+	.b-right-block{
+		order:-1;
+		margin-bottom: 10px;
+	}
 	.b-tickets_head{
 		width:100%;
 	}
@@ -982,6 +1023,12 @@ body{
 	}
 }
 @media (max-width: 576px){
+		.input{
+			width: 90%;
+		}
+		textarea{
+			width: 90%;
+		}
 		.b-main-but{
 			margin-top: 89px;
 			padding: 15px;
@@ -1098,5 +1145,13 @@ body{
 @media(max-width: 767px){
 	.b-passage-photo{
 		width: 100%;
+	}
+}
+@media(max-width:400px){
+	.personal-info, .delivery, .pay, .b-block-content{
+		padding:5px;
+	}
+	.b-left-block,.b-right-block{
+		padding: 0px;
 	}
 }
