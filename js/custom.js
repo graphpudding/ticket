@@ -22,6 +22,7 @@ var cardnumber = document.getElementById('cardnumber');
 var expirationdate = document.getElementById('expirationdate');
 var securitycode = document.getElementById('securitycode');
 var bCashPay = document.querySelector('.b-cash-pay');
+var pay = document.getElementsByClassName('js-pay');
 // анимация главной страницы
 for (var i = 0; i < but.length; i++) {
 	but[i].addEventListener('click',function () {
@@ -39,6 +40,15 @@ for (var i = 0; i < but.length; i++) {
 		head.style.height="0px";
 		burger.classList.remove('invisible');
 	}) 
+}
+for (var i = 0; i < pay.length; i++) {
+	pay[i].addEventListener('click',function(){
+		console.log('g');
+		for (var j = 0; j < pay.length; j++) {
+			pay[j].classList.add('inactive');
+		}
+		this.classList.remove('inactive');
+	});
 }
 //news
 for(var i = 0; i < newsCard.length; i++){
@@ -109,9 +119,7 @@ $('#ticket-right1').click(function(){
    ticketsCount++;
    $('.js-ticket-input1').val(ticketsCount);
 });
-$('.input').click(function(){
-	this.value="";
-});
+
 $('.credit-card').click(function(){
 	bCreditCard.classList.remove('invisible');
 	bCashPay.classList.add('invisible');
@@ -124,6 +132,7 @@ $('.cash').click(function(){
 	bCashPay.classList.remove('invisible');
 	bCreditCard.classList.add('invisible');
 })
+
 /*$(document).on('click','.js-cart-mounth', function () {
 	if ('.js-cart-mounth'.target[0]) {
 		for (var i = 0; i < ; i++) {
