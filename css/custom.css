@@ -111,7 +111,8 @@ body{
 }
 .little-text{
 	font-size: 12px;
-    opacity: 0.85;
+	opacity: 0.85;
+	padding: 0px 12px;
 }
 .checkbox{
 	width: 12px;
@@ -845,6 +846,9 @@ background:#5c5cff;
 	text-transform: uppercase;
 	color: #292727;
 	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .input{
 	width: 55%;
@@ -919,11 +923,11 @@ background:#5c5cff;
 .event-info-text-head{
 	font-weight: 700;
 }
-.cash img,.samsung-pay img,.credit-card img{
+.pay-img{
 	width: 25px;
 	padding: 10px;
 }
-.apple-pay img{
+.apple-pay-img{
 	width: 40px;
 	padding: 10px;
 }

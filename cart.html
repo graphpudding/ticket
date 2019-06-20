@@ -88,7 +88,7 @@
 								<p class="uppercase">наш пункт самовывоза:</p>
 								<p>Улица Пушкина дом колотушкина</p>
 								<div class="shipment-map">
-									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25274.183183899473!2d37.51307706968331!3d55.95035482346882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1560690588715!5m2!1sru!2sru" width="70%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25274.183183899473!2d37.51307706968331!3d55.95035482346882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1560690588715!5m2!1sru!2sru" width="90%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 								</div>
 							</div>
 						</div>		
@@ -105,22 +105,22 @@
 									</div>
 									<div class="fifty-percent-block">	
 										<div class="cash js-pay inactive"> 
-											<img src="css/images/cash.png">наличными
+											<img src="css/images/cash.png" class="pay-img">наличными
 										</div>
 									</div>
 									<div class="fifty-percent-block">
 										<div class="samsung-pay js-pay inactive"> 
-											<img src="css/images/samsung.png"> samsung pay
+											<img src="css/images/samsung.png" class="pay-img"> samsung pay
 										</div>
 									</div>
 									<div class="fifty-percent-block ">
 										<div class="apple-pay js-pay inactive">
-											<img src="css/images/Apple-Pay.png">
+											<img src="css/images/Apple-Pay.png" class="apple-pay-img">
 											Apple pay
 										</div>
 									</div>
 								</div>
-							<div class="b-credit-card invisible">
+							<div class="b-credit-card js-pay-text invisible">
 										 <div class="payment-title">
 									       <p class="pay-heading">Информация о карте</p>
 									    </div>
@@ -250,8 +250,24 @@
 							 		</div>
 								    <a href="#" class="b-pay-buy">оформить заказ</a>
 							</div>
-							<div class="b-cash-pay invisible">
+							<div class="b-cash-pay js-pay-text invisible">
 							 <p class="pay-heading">Вы выбрали оплату наличными при получени</p>
+							 	 <div>
+								    	<p class="little-text">Нажимая на кнопку «Оформить заказ», я даю согласие на обработку персональных данных</p>
+							 			<p class="little-text"><input type="checkbox" class="checkbox" name="">&nbsp;Согласен с условиями оферты</p>
+							 	</div>
+							 	<a href="#" class="b-pay-buy">оформить заказ</a>
+							</div>							
+							<div class="apple-pay-text js-pay-text invisible">
+							 <p class="pay-heading">Вы выбрали оплату <img src="css/images/Apple-Pay.png" class="apple-pay-img"></p>
+							 	 <div>
+								    	<p class="little-text">Нажимая на кнопку «Оформить заказ», я даю согласие на обработку персональных данных</p>
+							 			<p class="little-text"><input type="checkbox" class="checkbox" name="">&nbsp;Согласен с условиями оферты</p>
+							 	</div>
+							 	<a href="#" class="b-pay-buy">оформить заказ</a>
+							</div>
+							<div class="samsung-pay-text js-pay-text invisible">
+							 <p class="pay-heading">Вы выбрали оплату <img src="css/images/samsung.png" class="pay-img"></p>
 							 	 <div>
 								    	<p class="little-text">Нажимая на кнопку «Оформить заказ», я даю согласие на обработку персональных данных</p>
 							 			<p class="little-text"><input type="checkbox" class="checkbox" name="">&nbsp;Согласен с условиями оферты</p>

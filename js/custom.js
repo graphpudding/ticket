@@ -1,7 +1,7 @@
 var content=document.getElementById('js-content');
 var navi=document.getElementById('js-navi');
 var but=document.getElementsByClassName('js-but');
-var news=document.getElementsByClassName('js-news');
+var news=document.getElementsByClassName('js-news');    
 var newsCard=document.getElementsByClassName('js-news-card');
 var zone=document.getElementsByClassName('js-zone');
 var zoneContent=document.getElementsByClassName('js-zone-content');
@@ -22,7 +22,11 @@ var cardnumber = document.getElementById('cardnumber');
 var expirationdate = document.getElementById('expirationdate');
 var securitycode = document.getElementById('securitycode');
 var bCashPay = document.querySelector('.b-cash-pay');
+var apple = document.querySelector('.apple-pay-text');
+var sumsung = document.querySelector('.samsung-pay-text');
 var pay = document.getElementsByClassName('js-pay');
+var jsPayText = document.querySelectorAll('.js-pay-text');
+var input = document.querySelectorAll('.input');
 // анимация главной страницы
 for (var i = 0; i < but.length; i++) {
 	but[i].addEventListener('click',function () {
@@ -41,15 +45,32 @@ for (var i = 0; i < but.length; i++) {
 		burger.classList.remove('invisible');
 	}) 
 }
-for (var i = 0; i < pay.length; i++) {
-	pay[i].addEventListener('click',function(){
-		console.log('g');
-		for (var j = 0; j < pay.length; j++) {
-			pay[j].classList.add('inactive');
-		}
-		this.classList.remove('inactive');
-	});
-}
+function clearInputs(){
+    for (var i = 0; i < input.length; i++) {
+    	input[i].addEventListener('click',function(){
+                if(this.value=='example@mail.com'||
+                    this.value=='+7(XXX)-XX-XX-XX'||
+                    this.value=='Введите фамилию'||
+                    this.value=='Введите имя'){
+
+                    this.value='';
+                };
+    		});
+    	};
+    };
+
+function paymethods(){
+    for (var i = 0; i < pay.length; i++) {
+        pay[i].addEventListener('click',function(){
+            for (var j = 0; j < pay.length; j++) {
+                pay[j].classList.add('inactive');
+            };
+            this.classList.remove('inactive');
+        });
+    };
+};
+paymethods();
+clearInputs();
 //news
 for(var i = 0; i < newsCard.length; i++){
 	newsCard[i].classList.remove('big-news');
@@ -72,7 +93,7 @@ $('.courier-choice').on('click', function(){
 	courierChoice.classList.add('active');
 	shipmentChoice.classList.remove('active');
 	shipmentChoice.classList.add('blur');
-	console.log('hj,bn');
+	//console.log('hj,bn');
 });
 $('.shipment-choice').on('click',function(){
 	shipment.classList.remove('invisible');
@@ -81,7 +102,7 @@ $('.shipment-choice').on('click',function(){
 	courierChoice.classList.add('blur');
 	shipmentChoice.classList.remove('blur');
 	shipmentChoice.classList.add('active');
-	console.log('hj,bn');
+	//console.log('hj,bn');
 });
 });
 //плавный скролл
@@ -120,19 +141,32 @@ $('#ticket-right1').click(function(){
    $('.js-ticket-input1').val(ticketsCount);
 });
 
+function jsblocks (){
+        for (var i = 0; i < jsPayText.length; i++) {
+            jsPayText[i].classList.add('invisible');
+            //console.log('work');
+        }
+}
 $('.credit-card').click(function(){
-	bCreditCard.classList.remove('invisible');
-	bCashPay.classList.add('invisible');
+    jsblocks ();
+        bCreditCard.classList.remove('invisible');
 	name.value="";
 	cardnumber.value="";
 	expirationdate.value="";
 	securitycode.value="";
-})
+});
 $('.cash').click(function(){
-	bCashPay.classList.remove('invisible');
-	bCreditCard.classList.add('invisible');
-})
-
+      jsblocks ();
+    bCashPay.classList.remove('invisible');
+});
+$('.apple-pay').click(function(){
+      jsblocks ();
+    apple.classList.remove('invisible');
+});
+$('.samsung-pay').click(function(){
+      jsblocks ();
+    sumsung.classList.remove('invisible');
+});
 /*$(document).on('click','.js-cart-mounth', function () {
 	if ('.js-cart-mounth'.target[0]) {
 		for (var i = 0; i < ; i++) {
