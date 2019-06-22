@@ -55,12 +55,10 @@
     grid-template-areas: "name name""number number""expiration security";
     max-width: 400px;
     padding: 20px;
-    color: #707070;
 }
 
 label {
     padding-bottom: 5px;
-    font-size: 13px;
 }
 
 input {
