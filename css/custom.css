@@ -141,6 +141,7 @@ background:#5c5cff;
 	color: #fff;
 	position: fixed;
 	justify-content: space-around;
+	top: 0px;
 }
 .b-head_navi-cart-mobile{
 	display: inline-block;

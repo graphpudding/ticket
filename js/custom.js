@@ -45,19 +45,6 @@ for (var i = 0; i < but.length; i++) {
 		burger.classList.remove('invisible');
 	}) 
 }
-function clearInputs(){
-    for (var i = 0; i < input.length; i++) {
-    	input[i].addEventListener('click',function(){
-                if(this.value=='example@mail.com'||
-                    this.value=='+7(XXX)-XX-XX-XX'||
-                    this.value=='Введите фамилию'||
-                    this.value=='Введите имя'){
-
-                    this.value='';
-                };
-    		});
-    	};
-    };
 
 function paymethods(){
     for (var i = 0; i < pay.length; i++) {
@@ -70,7 +57,6 @@ function paymethods(){
     };
 };
 paymethods();
-clearInputs();
 //news
 for(var i = 0; i < newsCard.length; i++){
 	newsCard[i].classList.remove('big-news');
