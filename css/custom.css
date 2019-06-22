@@ -7,9 +7,11 @@ body{
 	font-family: ubuntu;
 }
  textarea {
-    width: 70%; 
+    width: 100%; 
     height: 60px;
     resize: none;
+    font-size: 14px;
+	font-family: ubuntu;
    } 
 .h1{
 	font-weight: 700;
@@ -832,7 +834,7 @@ background:#5c5cff;
 	padding: 0px 8px;
 	box-sizing: border-box;
 }
-.personal-info,.delivery,.pay,.b-block-content{
+.personal-info,.delivery,.pay,.b-block-content,.delivery-comments{
 	width: 100%;
 	background: #fff;
 	padding: 15px;
@@ -840,7 +842,7 @@ background:#5c5cff;
 	background-color: #f9f9f9;
 }
 
-.personal-info,.delivery,.pay{
+.personal-info,.delivery,.pay,.delivery-comments{
 	margin-bottom:10px;
 }
 .pay-heading{
@@ -1051,9 +1053,7 @@ background:#5c5cff;
 		.input{
 			width: 90%;
 		}
-		textarea{
-			width: 90%;
-		}
+
 		.b-main-but{
 			margin-top: 89px;
 			padding: 15px;
@@ -1173,7 +1173,7 @@ background:#5c5cff;
 	}
 }
 @media(max-width:400px){
-	.personal-info, .delivery, .pay, .b-block-content{
+	.personal-info, .delivery, .pay, .b-block-content,.delivery-comments{
 		padding:5px;
 	}
 	.b-left-block,.b-right-block{
