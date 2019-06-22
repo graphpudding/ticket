@@ -1180,3 +1180,8 @@ background:#5c5cff;
 		padding: 0px;
 	}
 }
+@media(max-width: 1200px){
+	.b-cart-event-info{
+		height: 120px
+	}
+}
