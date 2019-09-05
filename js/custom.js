@@ -28,23 +28,28 @@ var pay = document.getElementsByClassName('js-pay');
 var jsPayText = document.querySelectorAll('.js-pay-text');
 var input = document.querySelectorAll('.input');
 // анимация главной страницы
+ function mainpage(){
+        content.classList.remove('invisible');
+        navi.style.top=0+"px";
+        navi.style.position="fixed";
+        navi.classList.add('b-head_navi-background');
+        navi.classList.remove('b-head_navi-buttons');
+        navi.classList.remove('b-head_navi');
+        navi.classList.add('b-head_navi-main');
+        phone.classList.remove('invisible');
+        cart.classList.remove('invisible');
+        logo.style.display="none";
+        buy.style.display="none";
+        head.style.height="0px";
+        burger.classList.remove('invisible');
+    }
+
 for (var i = 0; i < but.length; i++) {
 	but[i].addEventListener('click',function () {
-		content.classList.remove('invisible');
-		navi.style.top=0+"px";
-		navi.style.position="fixed";
-		navi.classList.add('b-head_navi-background');
-		navi.classList.remove('b-head_navi-buttons');
-		navi.classList.remove('b-head_navi');
-		navi.classList.add('b-head_navi-main');
-		phone.classList.remove('invisible');
-		cart.classList.remove('invisible');
-		logo.style.display="none";
-		buy.style.display="none";
-		head.style.height="0px";
-		burger.classList.remove('invisible');
+        mainpage()
 	}) 
 }
+
 
 function paymethods(){
     for (var i = 0; i < pay.length; i++) {
